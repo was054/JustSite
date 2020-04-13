@@ -1,0 +1,114 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+header {
+  width: 40vw;
+  height: 5.5vw;
+  display: grid;
+  box-shadow: 0 0.1vw 0 0 #b0b5b5;
+  grid-template-columns: 2vw 14vw 24vw;
+  grid-template-rows: 1vw 1.5vw 2.5vw;
+  position: absolute;
+  left: 30vw;
+}
+header .goHome {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+header .goHome .logo {
+  width: 7vw;
+  height: 4vw;
+}
+.regForm {
+  position: absolute;
+  top: 7.5vw;
+  left: 30vw;
+  width: 40vw;
+}
+.regForm fieldset {
+  width: 37.5vw;
+  height: 12vw;
+  margin: 0;
+  padding: 1vw;
+  border: 0.3vw solid #f4841a;
+  border-radius: 0.5vw;
+  position: relative;
+}
+.regForm fieldset legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  color: #004c56;
+  font-weight: bold;
+}
+.regForm fieldset .parStyle {
+  margin: 0;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  color: #004c56;
+}
+.regForm fieldset .namePar {
+  top: 2.5vw;
+}
+.regForm fieldset .nameInfoImg {
+  display: block;
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  top: 2.5vw;
+  left: 26vw;
+}
+.regForm fieldset .emailPar {
+  top: 4.5vw;
+}
+.regForm fieldset .passPar {
+  top: 6.5vw;
+}
+.regForm fieldset .passRepPar {
+  top: 8.5vw;
+}
+.regForm fieldset .inputStyle {
+  position: absolute;
+  width: 15vw;
+  height: 1vw;
+  left: 9.2vw;
+}
+.regForm fieldset .starInfo {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8vw;
+  color: #004c56;
+  top: 12vw;
+  margin: 0;
+}
+.regForm fieldset em {
+  color: #f4841a;
+  font-size: 1vw;
+}
+.regForm .submitPar {
+  position: relative;
+  top: 1vw;
+  left: 14.75vw;
+  margin: 0;
+}
+.regForm .submitPar .submitButton {
+  display: inline-block;
+  margin: 0;
+  width: 8vw;
+  height: 2vw;
+  background-color: #004c56;
+  border: none;
+  border-radius: 0.3vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9vw;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.regForm .submitPar .submitButton:hover {
+  box-shadow: 0 0 0 0.2vw #004c56 inset, 0 0 0 0.3vw white inset;
+}

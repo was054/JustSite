@@ -1,0 +1,28 @@
+{% extends "layout/basic.html" %}
+
+{% load static %}
+{% block title %}Регистрация{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/regStyle.css' %}">
+{% endblock %}
+{% block content %}
+    <header>
+        <a class="goHome" href="{% url 'home' %}"><img src="{% static 'project_images/logo.png' %}" alt="logo" class="logo" title="На главную"></a>
+    </header>
+    <form class="regForm" method="post">
+        <fieldset>
+          <legend>Регистрация пользователеля</legend>
+            {% csrf_token %}
+          <p class="namePar parStyle">Имя<em>*</em><input type="text" class="inputStyle" name="username"></p>
+          <img class="nameInfoImg" src="{% static 'images/Orange_question.svg.png' %}" title="Имя пользователя, которое будет отображаться на сайте. Не более 20 символов, включая буквы, цифры и символы '.', '-', '_'">
+          <p class="emailPar parStyle">E-mail<em>*</em><input type="email" class="inputStyle" name="email"></p>
+          <p class="passPar parStyle">Пароль<em>*</em><input type="password" class="inputStyle" name="password"></p>
+          <p class="passRepPar parStyle">Повторите пароль<em>*</em><input type="password" class="inputStyle" name="password2"></p>
+          <p class="starInfo">Поля отмеченные <em>*</em> обязательны для ввода</p>
+        </fieldset>
+      <p class="submitPar"><input type="submit" value="Отправить" class="submitButton"></p>
+    </form>
+{% endblock %}
+
+
+

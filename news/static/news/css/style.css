@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  width: 50vw;
+  height: 25vw;
+  top: 11vw;
+  left: 25vw;
+}
+.wrapper .slide1 {
+  position: absolute;
+  width: 50vw;
+  height: 24vw;
+  background-image: url(../images/slide1.jpg);
+  background-size: 50vw 25vw;
+}
+.wrapper .slide1Headline {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top: 13vw;
+  left: 1.5vw;
+}
+.wrapper .slide1Pharagraph {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  color: white;
+  position: relative;
+  top: 15vw;
+  left: 1.5vw;
+}
+.wrapper .slideButton {
+  width: 1vw;
+  height: 1vw;
+  margin: 0.3vw;
+  position: absolute;
+  top: 25vw;
+}
+.wrapper .slideButton1Pos {
+  left: 21vw;
+}
+.wrapper .slideButton2Pos {
+  left: 23vw;
+}
+.wrapper .slideButton3Pos {
+  left: 25vw;
+}
