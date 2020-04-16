@@ -21,6 +21,8 @@ from news.views import index
 urlpatterns = [
     path('users/',include('users.urls')),
     path('', index, name='home'),
+    path('new', include('news.urls')),
+    path('<int:rubric_id>/', include('news.urls')),
     path('admin/', admin.site.urls),
     path('social/', include('social_django.urls', namespace='social')),
 ]
