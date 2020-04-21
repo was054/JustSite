@@ -16,6 +16,16 @@
         <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
     </div>
     {% endfor %}
+<h2>Dynamic content</h2>
+    <p>Rec counts:</p>
+    <ul>
+
+       <li><strong>Authors:</strong>{{ num_authors }}</li>
+        <li><strong>Email:</strong>{{ email }}</li>
+
+    </ul>
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1%} time{% else %} times{% endif %}</p>
+
 {% endblock %}
 
 
