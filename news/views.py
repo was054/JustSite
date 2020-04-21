@@ -1,16 +1,30 @@
 from django.shortcuts import render
 from .models import ModelNews
+from .models import Autor,User_auth
 from .models import Rubric
 from django.views.generic.edit import CreateView
 from .forms import ModelNewsForm
 
+
 def index(request):
     return render(request, 'news/index.html')
 
+def index_count(request):
+    num_authors= Autor.objects.count()
+    email = User_auth.objects.all()
+    num_visits=request.session.get('num_visits',0)
+    request.session['num_visits']=num_visits+1
+    return render(request, 'news/NewsIndex.html', context={'num_authors': num_authors,'num_visits': num_visits,'email': email})
+
 def new(request):
+    num_authors =  Autor.objects.count()
+    email =User_auth.objects.all()
+    num_visits = request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits + 1
     bbs = ModelNews.objects.all()
     rubrics = Rubric.objects.all()
-    context = {'bbs': bbs, 'rubrics': rubrics}
+
+    context = {'bbs': bbs, 'rubrics': rubrics,'num_authors': num_authors,'num_visits':num_visits,'email': email}
     return render(request, 'news/NewsIndex.html', context)
 
 def by_rubric(request,rubric_id):

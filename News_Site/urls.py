@@ -24,5 +24,6 @@ urlpatterns = [
     path('new', include('news.urls')),
     path('<int:rubric_id>/', include('news.urls')),
     path('admin/', admin.site.urls),
-    path('social/', include('social_django.urls', namespace='social')),
+    path('social/', include('social_django.urls', namespace='social'))
+
 ]

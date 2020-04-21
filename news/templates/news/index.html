@@ -10,6 +10,7 @@
             <input type="search" class="search">
             <button class="searchButton"><img src="{% static 'news/images/search.png' %}" alt="search" class="searchImg"></button>
         </div>
+
         <div class="statisticBox">1 $ = 0.3 бел.руб.</div>
         <div class="headerLine"></div>
         <button class="profileButton"><img src="{% static 'news/images/ava.png' %}" alt="avatar" class="profileImg"></button>
@@ -23,7 +24,9 @@
     </header>
 
     <aside class="rubricBox">
+
         <p><a href="{% url 'NewsIndex' %}"><h3>НОВОСТИ</h3></a></p>
+        <p><a href="{% url 'counter' %}"><h3>Счетчик</h3></a></p>
         <h2>Рубрики</h2>
         <a href="/1/">ПОЛИТИКА</a>
         <a href="/2/">ТЕХНОЛОГИИ</a>
@@ -35,6 +38,7 @@
 
     <div class="wrapper">       
         <div class="slide1">
+
             <h2 class="slide1Headline">SOME HEADLINE</h2>
             <p class="slide1Pharagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis culpa enim maxime exercitationem quos facere, eum voluptatum dolor asperiores dicta accusantium quis a quibusdam quia numquam impedit labore nemo. Maxime.</p>
         </div>       
@@ -46,5 +50,5 @@
     <section class="rightColumn">
         <h2 class="rightColumnHeadline">САМОЕ КОММЕНТИРУЕМОЕ</h2>
     </section>
-    
+
 {% endblock %}
