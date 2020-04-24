@@ -1,4 +1,12 @@
 from django.db import models
+from django.shortcuts import reverse
+from django.utils.timezone import now
+
+
+
+
+
+
 
 class ModelNews(models.Model):
     title = models.CharField(max_length=50, verbose_name='Заголовок')
@@ -22,5 +30,17 @@ class Rubric(models.Model):
         verbose_name_plural = 'Рубрики'
         verbose_name = 'Рубрика'
         ordering = ['name']
+
+class Autor(models.Model):
+    email = models.EmailField(null=True,blank=True)
+    date = models.DateField(default=now)
+    def __str__(self):
+        return'%s, %s' % (self.email,self.date)
+    def get_absolute_url(self):
+        return reverse(args=[str(self.id)])
+
+
+
+
 
 
