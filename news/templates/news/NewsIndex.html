@@ -19,9 +19,13 @@
 <h2>Dynamic content</h2>
     <p>Rec counts:</p>
     <ul>
+        <li><strong>Info:</strong>{{ info }}
         <li><strong>Emails:</strong>{{ emails }}</li>
         <li><strong>Dates:</strong>{{ dates }}</li>
         <li><strong>Users:</strong>{{ users }}</li>
+        <li><strong>Visits:</strong>{{ num_visits }}</li>
+
+
 
     </ul>
 <p>You have visited this page {{ num_visits }}{% if num_visits == 1%} time{% else %} times{% endif %}</p>

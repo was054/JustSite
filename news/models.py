@@ -31,13 +31,7 @@ class Rubric(models.Model):
         verbose_name = 'Рубрика'
         ordering = ['name']
 
-class Autor(models.Model):
-    email = models.EmailField(null=True,blank=True)
-    date = models.DateField(default=now)
-    def __str__(self):
-        return'%s, %s' % (self.email,self.date)
-    def get_absolute_url(self):
-        return reverse(args=[str(self.id)])
+
 
 
 
