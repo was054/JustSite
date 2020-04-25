@@ -16,10 +16,10 @@ def index_count(request):
     request.session['num_visits'] = num_visits+1
     if User.is_active:
         if User.is_authenticated:
-            date = User.objects.filter(is_active=True).values_list('last_login', flat=True)
+            dates = User.objects.filter(is_active=True).values_list('last_login', flat=True)
             users = User.objects.filter(is_active=True).exclude(email='')
             emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True)
-    return render(request, 'news/NewsIndex.html', context={'num_visits': num_visits,'date': date,'emails': emails,'users': users})
+    return render(request, 'news/NewsIndex.html', context={'num_visits': num_visits,'dates': dates,'emails': emails,'users': users})
 
 def new(request):
 
