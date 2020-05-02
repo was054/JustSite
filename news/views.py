@@ -33,7 +33,7 @@ def new(request):
 
     if User.is_authenticated:
         if User.is_active:
-            visits=num_visits
+            visits = num_visits
             pkey = request.user.pk
             users =User.objects.get(pk=pkey)
             dates = User.objects.filter(is_active=True).values('last_login').get(pk=pkey)
@@ -46,8 +46,7 @@ def new(request):
                 writer =csv.writer(f)
                 for row in data_all:
                     writer.writerow(row)
-            with open('info.csv') as f:
-                print(f.read())
+
     bbs = ModelNews.objects.all()
     rubrics = Rubric.objects.all()
     context = {'bbs': bbs, 'rubrics': rubrics,'num_visits': num_visits,'info': info,'dates': dates,'emails': emails,'users': users,'visits':visits,'pkey':pkey}
