@@ -2,12 +2,6 @@ from django.db import models
 from django.shortcuts import reverse
 from django.utils.timezone import now
 
-
-
-
-
-
-
 class ModelNews(models.Model):
     title = models.CharField(max_length=50, verbose_name='Заголовок')
     content = models.TextField(null=True, blank=True, verbose_name='Контент')
