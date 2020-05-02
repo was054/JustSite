@@ -33,7 +33,7 @@ def new(request):
 
     if User.is_authenticated:
         if User.is_active:
-            visits = num_visits
+            visits=num_visits
             pkey = request.user.pk
             users =User.objects.get(pk=pkey)
             dates = User.objects.filter(is_active=True).values('last_login').get(pk=pkey)
